@@ -1,0 +1,363 @@
+/* 一级导航栏颜色 */
+$theme-color: #3C4C65;
+/* 二级导航栏颜色 */
+$sub-theme-color: #E7F4FF;
+/* 二级导航高字体亮色 */
+$sub-nav-ft-active: #FF8D1A;
+/* 二级导航背景高亮色 */
+$sub-nav-bg-active: #F5F7FA;
+/* 二级导航边框色 */
+$sub-nav-br-active: #44536C;
+/* 结构树背景色 */
+$structure-bg: #FFFFFF;
+
+/* 小标题字体颜色 */
+$title-color: #999999;
+/* ===============表格颜色定义开始=============== */
+/* 表格标题色 */
+$table-hd-bg: #EFEFEF;
+/*标题栏字体颜色*/
+$table-hd-color: #333333;
+/* ===============表格颜色定义结束=============== */
+
+/* 字体高亮色 */
+$font-active-color: rgba(31, 36, 41, 0.7);
+/* 选项框高亮、主高亮*/
+$main-color:#4A81FF;
+
+/* ConditionsButton 条件栏按钮高度 */
+$button-height: 32px;
+
+/* 最小宽度 */
+$min-width:1366px;
+/* 最小高度 */
+$min-height:768px;
+
+/* margin 20px*/
+$margin-common:20px;
+
+/* sidebar */
+$sideBarWidth: 210px;
+$menuBg:$theme-color; // 侧边栏背景颜色
+$menuText:#f4f4f5; // 文字颜色
+$menuActiveText:#2E8B57; //点击后文字颜色
+
+
+$subMenuActiveText:#f4f4f5;
+$menuHover:#263445;
+$subMenuBg:#1f2d3d;
+$subMenuHover:#001528;
+
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+
+
+  buttonHeight: $button-height;
+  themeColor: $theme-color;
+  minWidth: $min-width;
+  minHeight: $min-height;
+}
+
+:root {
+  --bg-color: black;
+
+  /* 侧边导航栏相关 */
+  --sidebar-acitve-bg-color: #E5ECFC;
+  --sidebar-hover-bg-color: #F5F7FA;
+  --sidebar-active-text-color: #2E8B57;
+
+  /* 顶部导航栏相关 */
+  --headnav-active-bg-color: #4A81FF;
+}
+
+
+
+
+$spaceSize: 2px;
+$lineHeight: 1.5;
+
+/* 间隔 */
+@for $i from 1 through 64 {
+  .mt-#{$i} {
+    margin-top: ($spaceSize * $i);
+  }
+
+  .mb-#{$i} {
+    margin-bottom: ($spaceSize * $i);
+  }
+
+  .ml-#{$i} {
+    margin-left: ($spaceSize * $i);
+  }
+
+  .mr-#{$i} {
+    margin-right: ($spaceSize * $i);
+  }
+
+  .mx-#{$i} {
+    margin-left: ($spaceSize * $i);
+    margin-right: ($spaceSize * $i);
+  }
+
+  .my-#{$i} {
+    margin-top: ($spaceSize * $i);
+    margin-bottom: ($spaceSize * $i);
+  }
+}
+
+@for $i from 1 through 64 {
+  .pt-#{$i} {
+    padding-top: ($spaceSize * $i);
+  }
+
+  .pb-#{$i} {
+    padding-bottom: ($spaceSize * $i);
+  }
+
+  .pl-#{$i} {
+    padding-left: ($spaceSize * $i);
+  }
+
+  .pr-#{$i} {
+    padding-right: ($spaceSize * $i);
+  }
+
+  .px-#{$i} {
+    padding-left: ($spaceSize * $i);
+    padding-right: ($spaceSize * $i);
+  }
+
+  .py-#{$i} {
+    padding-top: ($spaceSize * $i);
+    padding-bottom: ($spaceSize * $i);
+  }
+}
+
+/* 尺寸 */
+@for $i from 1 through 200 {
+  .w-#{$i} {
+    width: ($spaceSize * $i);
+  }
+}
+
+@for $i from 1 through 100 {
+  .mw-#{$i} {
+    max-width: ($spaceSize * $i * 10);
+  }
+}
+
+@for $i from 1 through 200 {
+  .h-#{$i} {
+    height: ($spaceSize * $i);
+  }
+}
+
+@for $i from 1 through 100 {
+  .mh-#{$i} {
+    max-height: ($spaceSize * $i * 10);
+  }
+}
+
+/* 字体尺寸 */
+@for $i from 1 through 64 {
+  .fs-#{$i} {
+    font-size: ($i * 1px);
+    line-height: round($i * $lineHeight * 1px);
+  }
+}
+
+@for $i from 1 through 64 {
+  .lh-#{$i} {
+    line-height: ($i * 1px);
+  }
+}
+
+/* 圆角 与 边框 */
+@for $i from 0 through 32 {
+  .rounded-#{$i} {
+    border-radius: ($spaceSize * $i);
+  }
+
+  .border-#{$i} {
+    border-width: ($i * 1px);
+    border-style: solid;
+  }
+}
+
+/* flex布局 */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.j-start {
+  justify-content: flex-start;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-sb {
+  justify-content: space-between;
+}
+
+.j-sa {
+  justify-content: space-around;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-start {
+  align-items: flex-start;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.a-stretch {
+  align-items: stretch;
+}
+
+.position-absolute-full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.position-fixed-full {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+/* 颜色 */
+.text-primary {
+  color: $theme-color;
+}
+
+.text-secondary {
+  color: $sub-theme-color;
+}
+
+.text-active {
+  color: $sub-nav-ft-active;
+}
+
+// .text-success {
+// 	color: $colorSuccess;
+// }
+// .text-fail {
+// 	color: $colorFail;
+// }
+// .text-error {
+// 	color: $colorError;
+// }
+.text-white {
+  color: #FFFFFF;
+}
+
+.text-black {
+  color: #333333;
+}
+
+.text-grey {
+  color: #7a7a7a;
+}
+
+.bg-page {
+  background-color: #fafafa;
+}
+
+.bg-primary {
+  background-color: $theme-color;
+}
+
+.bg-secondary {
+  background-color: $sub-theme-color;
+}
+
+// .bg-tertiary{
+// 	background-color: $colorTertiary;
+// }
+// .bg-quaternary{
+// 	background-color: $colorQuaternary;
+// }
+.bg-active {
+  background-color: $sub-nav-ft-active;
+}
+
+// .bg-success {
+// 	background-color: $colorSuccess;
+// }
+// .bg-fail {
+// 	background-color: $colorFail;
+// }
+// .bg-Error {
+// 	background-color: $colorError;
+// }
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.bg-black {
+  background-color: #333333;
+}
+
+.bg-grey {
+  background-color: #7a7a7a;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-normal {
+  font-weight: normal;
+}
