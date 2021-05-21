@@ -1,4 +1,4 @@
-# vue_test
+# Vue Template Frame
 
 ## Project setup
 ```
